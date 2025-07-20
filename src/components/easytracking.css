@@ -1,0 +1,322 @@
+/* Easy Tracking Component Styles */
+.easy-tracking {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Header Styles */
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+  }
+  
+  /* Form Container */
+  .form-container {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+  }
+  
+  .form-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Type Toggle Buttons */
+  .type-toggle {
+    display: flex;
+    background: #f1f1f1;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    gap: 5px;
+  }
+  
+  .toggle-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #666;
+  }
+  
+  .toggle-btn.active.expense {
+    background: #e74c3c;
+    color: white;
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+  }
+  
+  .toggle-btn.active.income {
+    background: #27ae60;
+    color: white;
+    box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+  }
+  
+  .toggle-btn:hover:not(.active) {
+    background: #ddd;
+  }
+  
+  /* Input Groups */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+  
+  /* Add Button */
+  .add-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  }
+  
+  .add-btn:active {
+    transform: translateY(0);
+  }
+  
+  /* Transactions Container */
+  .transactions-container {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+  }
+  
+  .transactions-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* No Transactions Message */
+  .no-transactions {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+  }
+  
+  .no-transactions p:first-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  /* Transactions List */
+  .transactions-list {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .transaction-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 5px solid;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .transaction-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transaction-item.income {
+    background: #d5f4e6;
+    border-left-color: #27ae60;
+  }
+  
+  .transaction-item.expense {
+    background: #fadbd8;
+    border-left-color: #e74c3c;
+  }
+  
+  /* Transaction Info */
+  .transaction-info {
+    flex: 1;
+  }
+  
+  .transaction-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .transaction-description {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+  .transaction-amount {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  .transaction-item.income .transaction-amount {
+    color: #27ae60;
+  }
+  
+  .transaction-item.expense .transaction-amount {
+    color: #e74c3c;
+  }
+  
+  .transaction-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Delete Button */
+  .delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+    margin-left: 10px;
+  }
+  
+  .delete-btn:hover {
+    background: #f8f8f8;
+  }
+  
+  /* Summary Section */
+  .summary {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .summary-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f8f9fa;
+  }
+  
+  .summary-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .summary-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .summary-value.income {
+    color: #27ae60;
+  }
+  
+  .summary-value.expense {
+    color: #e74c3c;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .easy-tracking {
+      padding: 10px;
+    }
+    
+    .header h1 {
+      font-size: 2rem;
+    }
+    
+    .form-container,
+    .transactions-container,
+    .summary {
+      padding: 20px;
+    }
+    
+    .transaction-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    
+    .transaction-amount {
+      font-size: 1.1rem;
+    }
+    
+    .summary {
+      grid-template-columns: 1fr;
+    }
+  }
